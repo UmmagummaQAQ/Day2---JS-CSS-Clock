@@ -1,0 +1,127 @@
+html {
+  background-image: linear-gradient(
+    100deg,
+    rgb(144, 190, 137) 13.6%,
+    rgb(205, 226, 174) 65.3%,
+    rgb(141, 170, 117) 108.8%
+  );
+  background-size: cover;
+  font-family: "helvetica neue";
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock {
+  width: 40rem;
+  height: 40rem;
+  border: 20px solid rgb(5, 5, 5);
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+    inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 12-3-6-9 */
+.scale div {
+  background-color: rgb(8, 8, 8);
+  position: absolute;
+}
+.scale div:nth-child(1) {
+  width: 14px;
+  height: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(20.6rem, -0.7rem);
+}
+.scale div:nth-child(2) {
+  width: 10px;
+  height: 14px;
+  left: 50%;
+  top: 100%;
+  transform: translate(-0.5rem, -1.4rem);
+}
+.scale div:nth-child(3) {
+  width: 14px;
+  height: 10px;
+  left: 0;
+  top: 50%;
+  transform: translate(0rem, -0.7rem);
+}
+.scale div:nth-child(4) {
+  width: 10px;
+  height: 14px;
+  left: 50%;
+  top: 0;
+  transform: translate(-0.5rem, 0rem);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+}
+
+.clock-face::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(5, 5, 5);
+}
+
+.hand {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.second-hand::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 4px;
+  height: 50%;
+  background-color: rgb(172, 13, 13);
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 0);
+}
+.min-hand::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 9px;
+  height: 40%;
+  background-color: rgb(1, 167, 98);
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 0);
+}
+.hour-hand::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 14px;
+  height: 29%;
+  background-color: rgb(172, 201, 8);
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 0);
+}
